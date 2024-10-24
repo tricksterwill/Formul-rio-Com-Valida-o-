@@ -1,0 +1,104 @@
+body{
+    background-image: url(../images/bg-repeat.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    min-height: 100vh;
+    font-family: 'roboto', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100vh
+}
+
+@media (max-width: 762px){
+    .container{
+        flex-direction: column;
+    }
+}
+
+
+
+.container .text {
+    color: #fff;
+    width: 300px;
+}
+
+.container .text h2{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 11px;
+}
+
+.container .form {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    background-color: rgb(253, 247, 239);
+    height: 378px;
+    padding: 20px;
+    box-shadow: 0 27px 49px -25px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.container .form .input-text:not(.mensagem){
+    width: 298px;
+    height: 35px;
+    padding-left: 10px ;
+}
+
+.container .form .input-text.mensagem {
+    width: 298px;
+    height: 100px;
+    padding-bottom: 73px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.container .form .input-text.mensagem::placeholder {
+    position: absolute;
+    top: 0;
+    margin-top: 3px;
+}
+
+.container .form .alerta-fixo {
+    align-self: start;
+    position: absolute;
+    top: 280px;
+    right: 180px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container .form .botao-enviar {
+    margin-top: 26px;
+    height: 42px;
+    width: 100%;
+    color: #fff;
+    background-color: #65edab;
+    cursor: pointer;
+}
+.mudar-cor-aprovado {
+    border: 1px solid #3bbd57;
+}
+.mudar-cor-negado {
+    border: 1px solid #c33131;
+}
+
+.container .form .obrigatorio{
+    opacity: 0; 
+    height: 15px; 
+}
+
+.container .form .obrigatorio.alerta {
+    opacity: 1;
+    color: #c33131;
+    font-size: 8px;
+}
+
+
+
